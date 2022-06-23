@@ -6,6 +6,7 @@
 /* common */
 html{
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 .text-center{
     text-align: center !important;
