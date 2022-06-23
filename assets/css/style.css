@@ -135,10 +135,16 @@ html{
     margin-top: 46px;
     /*để làm chiều cao của bức ảnh bằng 50% chiều ngang của chính nó 
       */
-    padding-top: 50%;;
-    background: url('/assets/img/SLIDER/slider1.jpg') top center/cover no-repeat!important;
+    /* padding-top: 50%;; */
+    /* background: url('/assets/img/SLIDER/slider1.jpg') top center/cover no-repeat!important; */
 }
 
+#slider img{
+    width: 100%;
+    background-position:  top ;
+    /* padding-top: 50%; */
+    background-size: 100%;;
+}
 #slider .text-content{
     position: absolute;
     bottom: 47px;
