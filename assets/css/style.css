@@ -136,8 +136,9 @@ html{
     /*để làm chiều cao của bức ảnh bằng 50% chiều ngang của chính nó 
       */
     padding-top: 50%;;
-    background: url('/assets/img/SLIDER/slider1.jpg') top center/cover no-repeat;
+    background: url('/assets/img/SLIDER/slider1.jpg') top center/cover no-repeat!important;
 }
+
 #slider .text-content{
     position: absolute;
     bottom: 47px;
@@ -154,6 +155,7 @@ html{
     text-align: center;
     
 }
+
 #slider .text-heading{
     font-weight: 500;
     font-size: 24px;
