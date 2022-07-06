@@ -1,0 +1,52 @@
+@media (max-width:739px){
+
+    #header{
+        overflow:hidden;
+    }
+    #nav{
+        display:block;
+    }
+    #nav > li{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: rgb(36, 117, 139);
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #header .search-btn{
+        display: none;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+}
+
+
+@media (min-width: 740px ) and(max-width: 1023px){
+    #header .mobile-menu-btn {
+            display: none;
+    }
+    #header .search-btn {
+        display: block;
+    }
+}
+
+
+@media (min-width: 1024px ){
+    #header .mobile-menu-btn{
+        display: none;
+    }
+    #header .search-btn{
+        display: block;
+    }
+}

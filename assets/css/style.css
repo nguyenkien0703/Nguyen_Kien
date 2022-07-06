@@ -23,6 +23,9 @@ html{
 .pull-right{
     float : right !important
 }
+
+
+
 #main{
 
 }
@@ -61,6 +64,7 @@ html{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;;
 }
 #nav{
     display: inline-block;
@@ -117,16 +121,26 @@ html{
 #nav .nav-arrow-down{
     font-size: 14px;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    
 
+}
+#header .mobile-menu-btn,
 #header .search-btn{
     float : right;
     padding: 0 21px;;
 
 }
+#header .mobile-menu-btn:hover,
 #header .search-btn:hover{
     cursor: pointer;
     background-color: #f44336;
 }
+#header .menu-icon,
 #header .search-icon{
     font-size: 20px;
     color : #fff;
@@ -184,9 +198,12 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width:100%;
     margin-left:auto ;
     margin-right:auto;
     padding: 64px 0 112px;
+    padding-right: 16px;
+    padding-left: 16px;
     
 }
 #content .section-heading{
