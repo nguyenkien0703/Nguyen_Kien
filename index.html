@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="./assets/img/favicon/favicon1.jpg">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
-    
+
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css" />
 </head>
 
@@ -22,20 +22,27 @@
         <div id="header">
             <!-- begin : nav -->
             <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#band">Band</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Home</a>
+                </li>
+                <li><a href="#band">Band</a>
+                </li>
+                <li><a href="#tour">Tour</a>
+                </li>
+                <li><a href="#contact">Contact</a>
+                </li>
                 <li>
-                        <a href="#">
+                    <a href="#">
                     More
                     <i class="nav-arrow-down ti-angle-down"></i>
                         </a>
-                        <ul class="subnav">
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Extras</a></li>
-                            <li><a href="#">Media</a></li>
-                        </ul>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a>
+                        </li>
+                        <li><a href="#">Extras</a>
+                        </li>
+                        <li><a href="#">Media</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- end : nav -->
@@ -106,8 +113,10 @@
                     </p>
                     <!-- tickkét  -->
                     <ul class="ticket-list">
-                        <li>September <span class="sold-out">sold out</span></li>
-                        <li>October <span class="sold-out">sold out</span></li>
+                        <li>September <span class="sold-out">sold out</span>
+                        </li>
+                        <li>October <span class="sold-out">sold out</span>
+                        </li>
                         <li>
                             November
                             <div class="quantity">3</div>
@@ -230,87 +239,24 @@
             <!-- body modal -->
             <div class="modal-body">
                 <label for="ticket-quantity" class="modal-label">
-            <i class="modal-heading-icon ti-shopping-cart"></i>
-            Tickets, $15 per person
-          </label>
+                    <i class="modal-heading-icon ti-shopping-cart"></i> Tickets, $15 per person
+                </label>
                 <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?" />
 
                 <label for="mail" class="modal-label">
-            <i class="ti-user"></i>
-            Send To
-          </label>
+                    <i class="ti-user"></i> Send To
+                </label>
                 <input id="mail" type="text" class="modal-input" placeholder="Enter
             mail" />
-                <button id="buy-ticket">Pay <i class="ti-check"></i></button>
+                <button id="buy-ticket">Pay <i class="ti-check"></i>
+                </button>
             </div>
 
-            <footer class="modal-foorter">Need <a href="">help</a></footer>
+            <footer class="modal-foorter">Need <a href="">help</a>
+            </footer>
         </div>
     </div>
-
-    <script>
-        const buyBtns = document.querySelectorAll(".js-buy-ticket");
-        const modal = document.querySelector(".js-modal");
-        const modalClose = document.querySelector(".js-modal-close");
-        const modalContainer = document.querySelector(".js-modal-container");
-        //hamf hiển thị modal mua vé
-        function showBuyTickets() {
-            modal.classList.add("open");
-        }
-        //hàm ẩn modakl mua vé
-        function hideBuyTickets() {
-            modal.classList.remove("open");
-        }
-        // lắng nghe sự kiện mua vé
-        for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener("click", showBuyTickets);
-        }
-        modalClose.addEventListener("click", hideBuyTickets);
-        modal.addEventListener("click", hideBuyTickets);
-        modalContainer.addEventListener("click", function(event) {
-            event.stopPropagation();
-        });
-    </script>
-
-    <script>
-        //ẩn hiện menu khi click vào 
- 
-        var header = document.getElementById('header')
-        var mobileMenu=document.getElementById('mobile-menu')
-        var currentHeight=header.clientHeight;
-        mobileMenu.onclick = function(){
-            var isClose = header.clientHeight==currentHeight;
-            if (isClose) {
-                header.style.height='auto';
-            }else {
-                header.style.height=null;
-
-            }
-        }
-
-
-
-        //tự động đóng khi chọn menu
-        var menuItems =document.querySelectorAll('#nav li a[href*="#"]');
-        for(var i=0;i<menuItems.length;i++){
-            var menuItem =menuItems[i];
-            menuItem.onclick=function(event){
-                var isParentMenu=this.nextElementSibling&& this.nextElementSibling.classList.contains('subnav');
-                if(!isParentMenu){
-
-                    header.style.height=null;
-                }else {
-                    event.preventDefault();
-                    
-                }
-            }
-        }
-
-
-
-
-
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
